@@ -18,6 +18,7 @@ const userSchema = new Schema({
   telefone: { type: String, required: true },
   sexo: { type: String, required: true, enum: ["Masculino", "Feminino"] },
   dataNascimento: { type: String, required: true },
+  creation: { type: Date, default: new Date() },
 });
 
 const UserModel = model("User", userSchema);
